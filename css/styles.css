@@ -84,6 +84,12 @@ body {
   -webkit-transition: all 0.5s;
 }
 
+.close-icon {
+  display: none;
+  margin: 20px;
+  float: right;
+}
+
 .profile-mobile img {
   width: 100px;
   height: auto;
@@ -253,7 +259,7 @@ body {
   }
 }
 
-/* Medium <= 992px */
+/* Medium <= 950px */
 @media screen and (max-width: 992px) {
   .grid-container {
     grid-template-columns: 1fr;
@@ -273,6 +279,10 @@ body {
 
   .sidebar-title > span {
     display: inline;
+  }
+
+  .close-icon {
+    display: block;
   }
 }
 
@@ -303,7 +313,6 @@ body {
     display: none;
   }
 }
-
 
 /* Extra Small <= 450px */
 @media screen and (max-width: 450px) {
