@@ -49,13 +49,14 @@ body {
   padding: 10px;
   line-height: 40px;
   margin: 2px;
+  cursor: pointer;
 }
 
 .links .count {
   position: relative;
   top: -20px;
   left: 60px;
-  background: rgb(11, 198, 11);
+  background: rgb(113, 210, 65);
   color: white;
   border-radius: 50%;
   padding: 4px 6px;
@@ -67,10 +68,47 @@ body {
   height: auto;
   margin: 0 30px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .menu-icon {
   display: none;
+}
+
+/* ---------- Profile dropdown ---------*/
+
+.card{
+  transition: 0.5s ease;
+}
+
+.card ul{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background: #ffffff;
+  position: fixed;
+  top: 4rem;
+  right:2rem;
+  border-radius: 10px;
+  padding: 10px 50px 10px 20px;
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+}
+
+.card ul li{
+  padding: 5px 0;
+  font-size: 14px;
+  list-style: none;
+}
+.card ul li a {
+  text-decoration: none;
+  color: #a3a3a3;
+  font-weight: 600;
+}
+.hidden{
+  display: none !important;
+}
+.card ul .logout-link a{
+  color: rgb(224, 67, 67);
 }
 
 /* ---------- SIDEBAR ---------- */
@@ -103,7 +141,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 30px 30px 30px;
+  padding: 30px 30px 10px;
   margin-bottom: 0px;
 }
 
@@ -119,11 +157,11 @@ body {
 .sidebar-list {
   padding: 0;
   list-style-type: none;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .sidebar-list-item {
-  padding: 20px 20px 20px 20px;
+  padding: 16px 20px;
   font-size: 16px;
 }
 
@@ -135,17 +173,17 @@ body {
 .sidebar-list-item > a {
   text-decoration: none;
   color: #9e9ea4;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sidebar-list-item > a > span{
+  margin-right: 20px;
 }
 
 .sidebar-responsive {
   display: inline !important;
   position: absolute;
-  /*
-    the z-index of the ApexCharts is 11
-    we want the z-index of the sidebar higher so that
-    the charts are not showing over the sidebar 
-    on small screens
-  */
   z-index: 12 !important;
 }
 
@@ -187,7 +225,6 @@ body {
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
-
 }
 
 .card {
@@ -247,7 +284,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 
 
 /* ---------- MEDIA QUERIES ---------- */
