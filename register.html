@@ -19,69 +19,73 @@
         <section class="form">
 
             <!-- Step 1 -->
-            <form id="form1" class="form form1">
-                <div class="fields">
-                    <div class="form-control firstname">
-                        <label for="firstname">First Name*</label>
-                        <input type="text" id="firstname">
-                        <small>Error Message</small>
+            <div id="step_1">
+                <form id="form1" class="form form1">
+                    <div class="fields">
+                        <div class="form-control firstname">
+                            <label for="firstname">First Name*</label>
+                            <input type="text" id="firstname">
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-control lastname">
+                            <label for="lastname">Last Name*</label>
+                            <input type="text" id="lastname">
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-control email">
+                            <label for="email">Email Address*</label>
+                            <input type="text" id="email">
+                            <small>Error Message</small>
+                        </div>        
+                        <div class="form-control phone">
+                            <label for="phone">Phone Number*</label>
+                            <input type="text" id="phone">
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-control address">
+                            <label for="address">Where are you from*</label>
+                            <input type="text" id="address">
+                            <small>Error Message</small>
+                        </div>
                     </div>
-                    <div class="form-control lastname">
-                        <label for="lastname">Last Name*</label>
-                        <input type="text" id="lastname">
-                        <small>Error Message</small>
+                    <div class="buttons">
+                        <button class="next-btn" onclick="stepForward(1, 2, 'form1')">Next</button>
                     </div>
-                    <div class="form-control email">
-                        <label for="email">Email Address*</label>
-                        <input type="text" id="email">
-                        <small>Error Message</small>
-                    </div>        
-                    <div class="form-control phone">
-                        <label for="phone">Phone Number*</label>
-                        <input type="text" id="phone">
-                        <small>Error Message</small>
-                    </div>
-                    <div class="form-control address">
-                        <label for="address">Where are you from*</label>
-                        <input type="text" id="address">
-                        <small>Error Message</small>
-                    </div>
-                </div>
-                <div class="buttons">
-                    <button class="next-btn">Next</button>
-                </div>
-            </form>
+                </form>
+            </div>
     
             <!-- Step 2 -->
-            <form id="form2" class="form form2">
-                <div class="fields">
-                    <div class="form-control company_name">
-                        <label for="company_name">Company Name*</label>
-                        <input type="text" id="company_name">
-                        <small>Error Message</small>
+            <div id="step_2">
+                <form id="form2" class="form form2">
+                    <div class="fields">
+                        <div class="form-control company_name">
+                            <label for="company_name">Company Name*</label>
+                            <input type="text" id="company_name">
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-control compay_email">
+                            <label for="company_email">Company Email Address*</label>
+                            <input type="text" id="company_email">
+                            <small>Error Message</small>
+                        </div>        
+                        <div class="form-control compay_phone">
+                            <label for="company_phone">Company Phone Number*</label>
+                            <input type="text" id="company_phone">
+                            <small>Error Message</small>
+                        </div>
+                        <div class="form-control position">
+                            <label for="position">Your position in Company*</label>
+                            <input type="text" id="position">
+                            <small>Error Message</small>
+                        </div>
+                
                     </div>
-                    <div class="form-control compay_email">
-                        <label for="company_email">Company Email Address*</label>
-                        <input type="text" id="company_email">
-                        <small>Error Message</small>
-                    </div>        
-                    <div class="form-control compay_phone">
-                        <label for="company_phone">Company Phone Number*</label>
-                        <input type="text" id="company_phone">
-                        <small>Error Message</small>
+                    <div class="buttons">
+                        <button class="previous-btn" onclick="stepBack(2, 1)">Previous</button>
+                        <button class="next-btn" onclick="stepForward(2, 3, 'form2')">Next</button>
                     </div>
-                    <div class="form-control position">
-                        <label for="position">Your position in Company*</label>
-                        <input type="text" id="position">
-                        <small>Error Message</small>
-                    </div>
-            
-                </div>
-                <div class="buttons">
-                    <button class="previous-btn">Previous</button>
-                    <button class="next-btn">Next</button>
-                </div>
-            </form>
+                </form>
+            </div>
 
         </section>
 
