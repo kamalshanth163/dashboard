@@ -12,7 +12,7 @@
 
 body{
 
-    background-color: #f9fafb;
+    background-color: #ffffff;
     font-family: 'Open Sans', sans-serif;
     display: flex;
     align-items: center;
@@ -83,10 +83,6 @@ h2{
 
 .form-control small{
     color: var(--error-color);
-    /* position: absolute;
-    bottom: 0;
-    left: 0;
-        */
     visibility: hidden;
 }
 
@@ -152,6 +148,38 @@ h2{
 .form3>.fields>.field-row>.form-control>input {
     width: 200px;
 }
+
+#step_4 {
+    text-align: center;
+}
+
+.boxes {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.box {
+    background: rgba(227, 241, 228, 0.55);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-area {
+    color: #777;
+}
+
+.text-area a {
+    color: rgb(74, 194, 23) !important;
+}
+
+
 
 /* ---------Grid--------- */
 

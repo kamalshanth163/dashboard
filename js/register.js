@@ -1,4 +1,4 @@
-// Form 1 elements
+// Step 1 elements
 
 const step_1 = document.getElementById("step_1");
 const form1 = document.getElementById("form1");
@@ -10,7 +10,7 @@ const phone = document.getElementById("phone");
 const address = document.getElementById("address");
 
 
-// Form 2 elements
+// Step 2 elements
 
 const step_2 = document.getElementById("step_2");
 const form2 = document.getElementById("form2");
@@ -21,7 +21,7 @@ const company_phone = document.getElementById("company_phone");
 const position = document.getElementById("position");
 
 
-// Form 3 elements
+// Step 3 elements
 
 const step_3 = document.getElementById("step_3");
 const form3 = document.getElementById("form3");
@@ -38,6 +38,12 @@ const friday_start = document.getElementById("friday_start");
 const friday_end = document.getElementById("friday_end");
 
 
+// Step 4 elements
+
+const step_4 = document.getElementById("step_4");
+
+
+
 // State of form validation
 var formValidation = {
     form1: false,
@@ -48,9 +54,10 @@ var formValidation = {
 
 // Initial settings 
 function setInitialSettings(){
-    step_1.style.display = "block";
+    step_1.style.display = "none";
     step_2.style.display = "none";
     step_3.style.display = "none";
+    step_4.style.display = "block";
 }
 setInitialSettings();
 
@@ -164,3 +171,6 @@ function stepBack(from, to) {
   nextStep.style.display = "block";
 }
 
+function finish() {
+    window.location.href = "index.html";
+}
