@@ -12,8 +12,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
     <!-- Fontawesome icons -->
-    <!-- <link rel="stylesheet" href="css/all.min.css"> -->
-    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/all.min.css">
 
     <!-- Custom CSS -->
@@ -88,48 +86,54 @@
         </div>
         
         <ul class="sidebar-list">
-          <li class="sidebar-list-item">
-            <a href="#" target="_blank">
-              <span class="material-icons-outlined">dashboard</span> Dashboard
+          <li class="sidebar-list-item dropdown">
+            <a href="#" onclick="expandMenu()">
+              <span class="material-icons-outlined">dashboard</span> Dashboard 
+              <!-- <span id="arrow" class="expand"> ></span> -->
             </a>
+            <ul class="submenu">
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">Reports</a></li>
+              <li><a href="#">Charts</a></li>
+            </ul>
           </li>
           <li class="sidebar-list-item">
-            <a href="#" target="_blank">
+            <a href="#" >
               <span class="material-icons-outlined">smartphone</span> Apps
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="#" target="_blank">
+            <a href="#" >
               <span class="material-icons-outlined">insert_chart</span> Charts
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="#" target="_blank">
+            <a href="#" >
               <span class="material-icons-outlined">language</span> Bootstrap
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="#" target="_blank">
+            <a href="#" >
               <span class="material-icons-outlined">fact_check</span> Plugins
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="#" target="_blank">
+            <a href="#" >
               <span class="material-icons-outlined">widgets</span> Widget
               </a>
               </li>
               <li class="sidebar-list-item">
-                <a href="#" target="_blank">
+                <a href="#" >
                   <span class="material-icons-outlined">article</span> Forms
                 </a>
               </li>
               <li class="sidebar-list-item">
-                <a href="#" target="_blank">
+                <a href="#" >
                   <span class="material-icons-outlined">table_view</span> Tables
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="#" target="_blank">
+            <a href="#" >
               <span class="material-icons-outlined">layers</span> Pages
             </a>
           </li>

@@ -286,6 +286,32 @@ body {
 }
 
 
+/* Menu, sub-menu in sidebar */
+.sidebar-list .submenu {
+  display: none;
+}
+
+.sidebar-list .submenu li {
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.sidebar-list .submenu a {
+  color: #333;
+  text-decoration: none !important;
+  list-style: none !important;
+  padding: 5px;
+}
+
+.sidebar-list .dropdown.active .submenu {
+  display: block;
+}
+
+#arrow {
+  margin-left: 10px;
+  display: inline; 
+}
+
 /* ---------- MEDIA QUERIES ---------- */
 
 /* Medium <= 1100px */

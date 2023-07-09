@@ -262,5 +262,18 @@ displayPicture.addEventListener("click", function() { //on click on profile pict
 card.classList.toggle("hidden")})
 
 
-// -------------------------------------------
+// --------------------- Sidebar sub menu ----------------------
 
+const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach((dropdown) => {
+      dropdown.addEventListener('click', () => {
+        dropdown.classList.toggle('active');
+      });
+    });
+
+function expandMenu(){
+  console.log("expand");
+  const arrow = document.getElementById("arrow");
+  arrow.style.display = "none";
+}
