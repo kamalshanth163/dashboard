@@ -1,34 +1,58 @@
 // Form 1 elements
+
 const step_1 = document.getElementById("step_1");
 const form1 = document.getElementById("form1");
+
 const firstname = document.getElementById("firstname");
 const lastname = document.getElementById("lastname");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const address = document.getElementById("address");
 
+
 // Form 2 elements
+
 const step_2 = document.getElementById("step_2");
 const form2 = document.getElementById("form2");
+
 const company_name = document.getElementById("company_name");
 const company_email = document.getElementById("company_email");
 const company_phone = document.getElementById("company_phone");
 const position = document.getElementById("position");
 
+
+// Form 3 elements
+
+const step_3 = document.getElementById("step_3");
+const form3 = document.getElementById("form3");
+
+const monday_start = document.getElementById("monday_start");
+const monday_end = document.getElementById("monday_end");
+const tuesday_start = document.getElementById("tuesday_start");
+const tuesday_end = document.getElementById("tuesday_end");
+const wednesday_start = document.getElementById("wednesday_start");
+const wednesday_end = document.getElementById("wednesday_end");
+const thursday_start = document.getElementById("thursday_start");
+const thursday_end = document.getElementById("thursday_end");
+const friday_start = document.getElementById("friday_start");
+const friday_end = document.getElementById("friday_end");
+
+
 // State of form validation
-
-setInitialSettings();
-
 var formValidation = {
-  form1: false,
-  form2: false,
+    form1: false,
+    form2: false,
+    form3: false,
 };
+
 
 // Initial settings 
 function setInitialSettings(){
     step_1.style.display = "block";
     step_2.style.display = "none";
+    step_3.style.display = "none";
 }
+setInitialSettings();
 
 // Show input error messages
 function showError(input, message) {
@@ -87,14 +111,12 @@ function checkFormValidation(formId) {
 //Event Listeners
 form1.addEventListener("submit", function (e) {
   e.preventDefault();
-
   checkRequired("form1", [firstname, lastname, email, phone, address]);
   checkEmail("form1", email);
 });
 
 form2.addEventListener("submit", function (e) {
   e.preventDefault();
-
   checkRequired("form2", [
     company_name,
     company_email,
@@ -103,6 +125,23 @@ form2.addEventListener("submit", function (e) {
   ]);
   checkEmail("form2", company_email);
 });
+
+form3.addEventListener("submit", function (e) {
+    e.preventDefault();
+    checkRequired("form3", [
+        monday_start,
+        monday_end,
+        tuesday_start,
+        tuesday_end,
+        wednesday_start,
+        wednesday_end,
+        thursday_start,
+        thursday_end,
+        friday_start,
+        friday_end,
+    ]);
+});
+
 
 // Manage form display
 function stepForward(from, to, form) {
