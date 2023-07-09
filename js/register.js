@@ -1,8 +1,18 @@
-const form = document.getElementById('form');
-const username = document.getElementById('username');
+// Form 1 elements
+const form1 = document.getElementById('form1');
+const firstname = document.getElementById('firstname');
+const lastname = document.getElementById('lastname');
 const email = document.getElementById('email');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
+const phone = document.getElementById('phone');
+const address = document.getElementById('address');
+
+// Form 2 elements
+const form2 = document.getElementById('form2');
+const company_name = document.getElementById('company_name');
+const company_email = document.getElementById('company_email');
+const company_phone = document.getElementById('company_phone');
+const position = document.getElementById('position');
+
 
 //Show input error messages
 function showError(input, message) {
@@ -28,7 +38,6 @@ function checkEmail(input) {
     }
 }
 
-
 //checkRequired fields
 function checkRequired(inputArr) {
     inputArr.forEach(function(input){
@@ -40,38 +49,25 @@ function checkRequired(inputArr) {
     });
 }
 
-
-//check input Length
-function checkLength(input, min ,max) {
-    if(input.value.length < min) {
-        showError(input, `${getFieldName(input)} must be at least ${min} characters`);
-    }else if(input.value.length > max) {
-        showError(input, `${getFieldName(input)} must be less than ${max} characters`);
-    }else {
-        showSucces(input);
-    }
-}
-
 //get FieldName
 function getFieldName(input) {
-    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-}
-
-// check passwords match
-function checkPasswordMatch(input1, input2) {
-    if(input1.value !== input2.value) {
-        showError(input2, 'Passwords do not match');
-    }
+    var value = input.id.charAt(0).toUpperCase() + input.id.slice(1);
+    value = value.replace("_", " ");
+    return value;
 }
 
 
 //Event Listeners
-form.addEventListener('submit',function(e) {
+form1.addEventListener('submit',function(e) {
     e.preventDefault();
 
-    checkRequired([username, email, password, password2]);
-    checkLength(username,3,15);
-    checkLength(password,6,25);
+    checkRequired([firstname, lastname, email, phone, address]);
     checkEmail(email);
-    checkPasswordMatch(password, password2);
+});
+
+form2.addEventListener('submit',function(e) {
+    e.preventDefault();
+
+    checkRequired([company_name, company_email, company_phone, position]);
+    checkEmail(company_email);
 });

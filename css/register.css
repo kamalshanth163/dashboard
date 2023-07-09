@@ -18,14 +18,16 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    margin: 0;
+    padding: 0px;
 }
 
-.container{
+.container {
+    width: 100%;
+}
+
+form {
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    width: 400px;
 }
 
 h2{
@@ -34,7 +36,12 @@ h2{
 }
 
 .form{
-    padding: 30px 40px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.fields {
+    margin-bottom: 40px;
 }
 
 .form-control{
@@ -66,11 +73,12 @@ h2{
 }
 
 .form-control.success input {
-    border-color: var(--succes-color);
+    /* border-color: var(--succes-color); */
 }
 
 .form-control.error input {
-    border-color: var(--error-color);    
+    border: 1px solid rgb(255, 125, 125);
+    background-color: #df92892f;    
 }
 
 .form-control small{
@@ -95,4 +103,117 @@ h2{
     font-size: 16px;
     margin-top:20px;
     width:100%;
+}
+.fields label {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(133, 133, 133);
+}
+
+.form .next-btn,
+.form .previous-btn {
+    background: rgb(74, 194, 23);
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    width: 100px;
+}
+
+.form .buttons {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+}
+
+.form {
+    position: relative;
+}
+
+/* ---------Grid--------- */
+
+/* Form 1 */
+.firstname {
+    grid-area: firstname;
+}
+
+.lastname {
+    grid-area: lastname;
+}
+
+.email {
+    grid-area: email;
+}
+
+.phone {
+    grid-area: phone;
+}
+
+.address {
+    grid-area: address;
+}
+
+.form1>.fields {
+    display: grid;
+    grid-template-areas:
+        'firstname lastname'
+        'email email'
+        'phone phone'
+        'address address'
+    ;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Form 2 */
+.company_name {
+    grid-area: company_name;
+}
+
+.compay_email {
+    grid-area: compay_email;
+}
+
+.compay_phone {
+    grid-area: compay_phone;
+}
+
+.position {
+    grid-area: position;
+}
+
+.form2>.fields {
+    display: grid;
+    grid-template-areas:
+        'company_name'
+        'compay_email'
+        'compay_phone'
+        'position'
+    ;
+    gap: 10px;
+    padding: 10px;
+}
+
+
+
+/* RESPONSIVENESS  */
+
+/* Extra Small <= 576px */
+@media screen and (max-width: 576px) {
+    .form1>.fields {
+        display: grid;
+        grid-template-areas:
+            'firstname'
+            'lastname'
+            'email'
+            'phone'
+            'address'
+        ;
+        gap: 10px;
+        padding: 10px;
+    }
 }

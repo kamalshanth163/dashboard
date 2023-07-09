@@ -7,33 +7,86 @@
     <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
-    <!-- <h1>Register page</h1> -->
-
+    
     <div class="container">
-        <form id="form" class="form">
-            <h2>Register With Us</h2>
-            <div class="form-control">
-                <label for="username">Username</label>
-                <input type="text" id="username" placeholder="Enter Username">
-                <small>Error Message</small>
-            </div>
-            <div class="form-control">
-                <label for="email">Email</label>
-                <input type="text" id="email" placeholder="Enter email">
-                <small>Error Message</small>
-            </div>
-            <div class="form-control">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter password">
-                <small>Error Message</small>
-            </div>
-            <div class="form-control">
-                <label for="password2">Confirm Password</label>
-                <input type="password" id="password2" placeholder="Enter password again">
-                <small>Error Message</small>
-            </div>
-            <button>Submit</button>
-        </form>
+
+        <h2>Form Step</h2>
+
+        <!-- Indicators -->
+        <section class="indicator"></section>
+
+        <!-- Form -->
+        <section class="form">
+
+            <!-- Step 1 -->
+            <form id="form1" class="form form1">
+                <div class="fields">
+                    <div class="form-control firstname">
+                        <label for="firstname">First Name*</label>
+                        <input type="text" id="firstname">
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control lastname">
+                        <label for="lastname">Last Name*</label>
+                        <input type="text" id="lastname">
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control email">
+                        <label for="email">Email Address*</label>
+                        <input type="text" id="email">
+                        <small>Error Message</small>
+                    </div>        
+                    <div class="form-control phone">
+                        <label for="phone">Phone Number*</label>
+                        <input type="text" id="phone">
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control address">
+                        <label for="address">Where are you from*</label>
+                        <input type="text" id="address">
+                        <small>Error Message</small>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="next-btn">Next</button>
+                </div>
+            </form>
+    
+            <!-- Step 2 -->
+            <form id="form2" class="form form2">
+                <div class="fields">
+                    <div class="form-control company_name">
+                        <label for="company_name">Company Name*</label>
+                        <input type="text" id="company_name">
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control compay_email">
+                        <label for="company_email">Company Email Address*</label>
+                        <input type="text" id="company_email">
+                        <small>Error Message</small>
+                    </div>        
+                    <div class="form-control compay_phone">
+                        <label for="company_phone">Company Phone Number*</label>
+                        <input type="text" id="company_phone">
+                        <small>Error Message</small>
+                    </div>
+                    <div class="form-control position">
+                        <label for="position">Your position in Company*</label>
+                        <input type="text" id="position">
+                        <small>Error Message</small>
+                    </div>
+            
+                </div>
+                <div class="buttons">
+                    <button class="previous-btn">Previous</button>
+                    <button class="next-btn">Next</button>
+                </div>
+            </form>
+
+        </section>
+
+        
+
     </div>
 
     
