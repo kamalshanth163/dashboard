@@ -43,7 +43,6 @@ const friday_end = document.getElementById("friday_end");
 const step_4 = document.getElementById("step_4");
 
 
-
 // State of form validation
 var formValidation = {
     form1: false,
@@ -53,11 +52,11 @@ var formValidation = {
 
 
 // Initial settings 
-function setInitialSettings(){
-    step_1.style.display = "none";
-    step_2.style.display = "none";
-    step_3.style.display = "none";
-    step_4.style.display = "block";
+function setInitialSettings() {
+  step_1.style.display = "block";
+  step_2.style.display = "none";
+  step_3.style.display = "none";
+  step_4.style.display = "none";
 }
 setInitialSettings();
 
@@ -134,21 +133,20 @@ form2.addEventListener("submit", function (e) {
 });
 
 form3.addEventListener("submit", function (e) {
-    e.preventDefault();
-    checkRequired("form3", [
-        monday_start,
-        monday_end,
-        tuesday_start,
-        tuesday_end,
-        wednesday_start,
-        wednesday_end,
-        thursday_start,
-        thursday_end,
-        friday_start,
-        friday_end,
-    ]);
+  e.preventDefault();
+  checkRequired("form3", [
+    monday_start,
+    monday_end,
+    tuesday_start,
+    tuesday_end,
+    wednesday_start,
+    wednesday_end,
+    thursday_start,
+    thursday_end,
+    friday_start,
+    friday_end,
+  ]);
 });
-
 
 // Manage form display
 function stepForward(from, to, form) {
@@ -160,6 +158,8 @@ function stepForward(from, to, form) {
 
     currentStep.style.display = "none";
     nextStep.style.display = "block";
+
+    updateProgress(from, from * 33);
   }
 }
 
@@ -172,5 +172,22 @@ function stepBack(from, to) {
 }
 
 function finish() {
-    window.location.href = "index.html";
+  window.location.href = "index.html";
 }
+
+// Update Progress bar
+var progressPercentage = 0;
+
+function updateProgress(step, percentage) {
+  // Calculate the width of the progress bar based on the percentage
+  var progressBarWidth =
+    (percentage / 100) * document.getElementById("progress-bar").offsetWidth;
+
+  var circle = document.getElementById("step_" + step + "_circle");
+  circle.className = "step active";
+
+  // Update the width of the progress bar
+  document.getElementById("progress").style.width = progressBarWidth + "px";
+}
+
+

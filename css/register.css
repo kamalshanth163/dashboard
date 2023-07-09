@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 :root{
-    --succes-color: #2ecc71;;
+    --succes-color: #2ecc71;
     --error-color: #e74c3c;
+    --primary-color: rgb(74, 194, 23);
 }
-
 
 *{
     box-sizing: border-box;
@@ -12,7 +12,7 @@
 
 body{
 
-    background-color: #ffffff;
+    background-color: #ededed;
     font-family: 'Open Sans', sans-serif;
     display: flex;
     align-items: center;
@@ -23,6 +23,9 @@ body{
 
 .container {
     width: 100%;
+    background: rgb(255, 255, 255);
+        margin: 20px;
+        border-radius: 20px;
 }
 
 form {
@@ -31,9 +34,10 @@ form {
 }
 
 h2{
-    text-align: center;
-    margin: 0 0 20px;
+    text-align: left;
+        margin: 40px;
 }
+
 
 .form{
     padding: 10px 20px;
@@ -72,10 +76,6 @@ h2{
 
 }
 
-.form-control.success input {
-    /* border-color: var(--succes-color); */
-}
-
 .form-control.error input {
     border: 1px solid rgb(255, 125, 125);
     background-color: #df92892f;    
@@ -109,7 +109,7 @@ h2{
 
 .form .next-btn,
 .form .previous-btn {
-    background: rgb(74, 194, 23);
+    background: var(--primary-color);
     border: none;
     border-radius: 4px;
     font-size: 14px;
@@ -161,6 +161,7 @@ h2{
 
 .box {
     background: rgba(227, 241, 228, 0.55);
+    color: #777;
     border-radius: 50%;
     width: 200px;
     height: 200px;
@@ -173,15 +174,69 @@ h2{
 
 .text-area {
     color: #777;
+    margin: 100px 0;
 }
 
 .text-area a {
-    color: rgb(74, 194, 23) !important;
+    color: var(--primary-color) !important;
+    }
+    
+    .indicator {
+        width: 800px;
+        margin: 0 auto;
+        text-align: center !important;
+    }
+    
+    .indicator>.steps {
+        display: flex;
+        justify-content: center !important;
+        gap: 200px;
+    }
+    
+    .indicator>.steps>.step {
+        width: 50px;
+        height: 50px;
+        background: rgb(250, 250, 250);
+        color: var(--primary-color);
+        border-radius: 50%;
+        border: 2px solid var(--primary-color);
+        padding: 10px;
+        font-weight: 600;
+        font-size: 20px;
+        z-index: 9999;
+    }
+    
+    .indicator>#progress-bar {
+        position: relative;
+        bottom: 27px;
+        left: 0;
+        background: rgb(213, 213, 213);
+        width: 100%;
+        height: 5px;
+        margin-bottom: 40px;
+    }
+    
+    #progress {
+        width: 0;
+        height: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .indicator>.steps>.active {
+        background: var(--primary-color);
+        color: white;
+    }
+
+.indicator>.steps>.inactive {
+    background: rgb(250, 250, 250);
+    color: var(--primary-color);
 }
 
 
-
-/* ---------Grid--------- */
+/* ---------Grid view--------- */
 
 /* Form 1 */
 .firstname {
@@ -246,11 +301,10 @@ h2{
 }
 
 
+/* ===================================== RESPONSIVENESS ========================================== */
 
-/* RESPONSIVENESS  */
-
-/* Extra Small <= 576px */
-@media screen and (max-width: 576px) {
+/* Extra Small <= 800px */
+@media screen and (max-width: 800px) {
     .form1>.fields {
         display: grid;
         grid-template-areas:
@@ -263,4 +317,23 @@ h2{
         gap: 10px;
         padding: 10px;
     }
+        .indicator {
+            width: 400px;
+        }
+    
+        .indicator>.steps {
+            gap: 100px;
+        }
+        }
+    
+        /* Extra Small <= 480px */
+        @media screen and (max-width: 480px) {
+    
+            .indicator {
+                width: 300px;
+            }
+    
+            .indicator>.steps {
+                gap: 50px;
+            }
 }

@@ -13,7 +13,17 @@
         <h2>Form Step</h2>
 
         <!-- Indicators -->
-        <section class="indicator"></section>
+        <section class="indicator">
+            <div class="steps">
+                <div id="step_1_circle" class="step inactive">1</div>
+                <div id="step_2_circle" class="step inactive">2</div>
+                <div id="step_3_circle" class="step inactive">3</div>
+                <div id="step_4_circle" class="step inactive">4</div>
+            </div>
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+        </section>
 
         <!-- Form -->
         <section class="form">
@@ -186,21 +196,19 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="text-area">
                     <p>Or if want skip this step entirely and setup it later</p>
                     <a href="index.html">Skip step</a>
                 </div>
-                
+
                 <div class="buttons">
                     <button class="previous-btn" onclick="stepBack(4, 3)">Previous</button>
                     <button class="next-btn" onclick="finish()">Finish</button>
                 </div>
             </div>
-
+            
         </section>
-
-        
 
     </div>
 
